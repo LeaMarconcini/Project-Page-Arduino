@@ -14,3 +14,42 @@
 .proyecto-dropdown-item {
     color: rgb(0, 0, 0);
 }
+
+.gist-data {
+    height: 400px !important;
+    background-color: black;
+}
+
+.gist-meta {
+    display: none;
+}
+
+.github-logo {
+    width: 20px;
+    margin-left: 8px;
+}
+
+/* .file {
+    background-color: black !important;
+}
+
+tbody {
+    background-color: rgb(19, 18, 18) !important;
+} */
+
+/* Better styles for embedding GitHub Gists */
+.gist{
+    font-size:13px;line-height:18px;
+}
+.gist pre{
+    font-family:Menlo,Monaco,'Bitstream Vera Sans Mono','Courier New',monospace !important
+}
+.gist-meta{
+    font-family:Arial,sans-serif;font-size:13px !important
+}
+.gist-meta a{
+    color:#3b5998 !important;font-weight:bold;text-decoration:none
+}
+.gist-meta a:hover{
+    text-decoration:underline
+}
