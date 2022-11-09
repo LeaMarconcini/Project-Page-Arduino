@@ -53,3 +53,7 @@ tbody {
 .gist-meta a:hover{
     text-decoration:underline
 }
+
+.precio {
+    font-weight: bolder;
+}
