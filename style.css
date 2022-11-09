@@ -43,7 +43,7 @@
     height: 500px !important;
 }
 
-#carouselExampleDark {
+.inicio {
     margin-top: 80px;
 }
 
@@ -61,11 +61,23 @@
      padding: 2px;
 }
 
-.scrolled .navbar-brand img{
+/* .scrolled .navbar-brand img{
     width: 87px;
     height: 60px;
-}
+} */
 
 .card-img-nosotros {
     object-fit: contain;
+}
+
+.titulo-inicio {
+    margin-top: 80px;
+}
+
+.img-container {
+    overflow: hidden;
+}
+
+.main-img {
+    height: 450px !important;
 }
