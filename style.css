@@ -134,3 +134,22 @@
 #titulo-principal {
     margin-top: 50px !important;
 }
+
+.material-img {
+    height: 80px;
+    border-left:1px solid black ;
+    float: right;
+    object-fit: contain;
+}
+
+.material-cards a{
+    transition: box-shadow .1s ease-in;
+    text-decoration: none;
+    color: black;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px;
+}
+
+.material-cards a:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
