@@ -71,7 +71,7 @@
     object-fit: contain;
 }
 
-.titulo-inicio {
+.titulo {
     margin-top: 80px;
     font-family:Geneva, Verdana, sans-serif;
 }
@@ -127,3 +127,7 @@
   .middle {
     width: 100%;
   }
+
+#titulo-principal {
+    margin-top: 50px !important;
+}
