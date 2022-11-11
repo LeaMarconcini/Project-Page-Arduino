@@ -83,3 +83,47 @@
 .main-img {
     height: 450px !important;
 }
+
+
+/* ESTILOS INICIO */
+
+.wrapper {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .box {
+    /* display: flex;
+    justify-content: space-between; */
+    /* position: sticky;
+    top: 0; */
+    width: 100%;
+  }
+  .box .left {
+    position: sticky;
+    z-index: 1;
+    background: white;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .box img {
+    width: 45vw;
+    position: absolute;
+    transition: opacity .5s ease;
+  }
+  .box > div {
+    height: 100%;
+  }
+  .box .in-in-middle {
+    height: 100vh;
+  }
+  
+  .middle {
+    width: 100%;
+  }
