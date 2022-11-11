@@ -30,6 +30,20 @@ const sendmail = () => {
     subject : document.getElementById("subject").value,
     msm : document.getElementById("message").value
   };
+
+  for (const key in params) {
+    if (params[key] == "") {
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Revise los datos',
+        showConfirmButton: false,
+        timer: 1500
+      })
+      return
+    }
+  }
+
   const serviceID = "service_mv0wp8r";
   const templateID = "template_0nthrxw";
 
