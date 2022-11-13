@@ -171,6 +171,15 @@
     opacity: 1;
 }
 
+.about-name {
+    transition: color .2s ease-in;
+}
+
+.about-card:hover .about-name{
+    color: white;
+    z-index: 100;
+}
+
 .extra-info {
     display: flex;
     justify-content: space-evenly;
@@ -180,7 +189,7 @@
     height: 100%;
     transition: opacity .2s ease-in;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.445);
+    background-color: rgba(0, 0, 0, 0.603);
     color: white;
 }
 
