@@ -38,6 +38,10 @@ const sendmail = () => {
     msm: document.getElementById("message").value
   };
 
+  let validation = {
+    
+  }
+
   for (const key in params) {
     if (params[key] == "") {
       Swal.fire({

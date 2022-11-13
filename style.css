@@ -136,6 +136,10 @@
     margin-top: 50px !important;
 }
 
+.material-card:hover {
+    background-color: rgb(250, 250, 250);
+}
+
 .material-img {
     height: 80px;
     border-left:1px solid black ;
