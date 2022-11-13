@@ -154,3 +154,7 @@
 .material-cards a:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+.subtitulo-codigo {
+    margin-left: 20px;
+}

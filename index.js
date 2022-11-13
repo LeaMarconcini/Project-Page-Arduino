@@ -1,11 +1,7 @@
 
-let tituloPrincipal = document.getElementById('titulo-principal')
-let objetivo = document.getElementById('objetivo')
-let desarrollo = document.getElementById('desarrollo')
-let lastScrollTop = 0;
+let div = document.querySelector('.left');
 
 window.onscroll = () => {
-  let div = document.querySelector('.left');
 
   if (document.documentElement.scrollTop > 1) {
     document.querySelector(".navbar").classList.add("scrolled")
@@ -14,22 +10,6 @@ window.onscroll = () => {
     document.querySelector(".navbar").classList.remove("scrolled");
     div.style.height = "calc(100vh - 60px)"
   }
-
-
-  // EFECTO SCROLL INTO VIEW
-
-  var st = window.pageYOffset || document.documentElement.scrollTop;
-
-  if (st > lastScrollTop) {
-    console.log(st)
-    objetivo.scrollIntoView({ behavior: "smooth" });
-  } else {
-    scroll(0,0);
-  }
-
-  lastScrollTop = st;
-
-
 
   let img = document.querySelectorAll('.img-main')
   const firstScrollTop = 0 - document.getElementById("arduino").getBoundingClientRect().top;
