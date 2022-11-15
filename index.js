@@ -30,20 +30,57 @@ window.onscroll = () => {
 
 };
 
-const sendmail = () => {
-  let params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    subject: document.getElementById("subject").value,
-    msm: document.getElementById("message").value
-  };
+// CONTACT FORM
 
-  let validation = {
-    
+const regex = {
+  name: /^([a-zA-Z]{3,20})( [a-zA-Z]{3,20})?$/,
+  email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+  subject: /^[\s\S]{3,}$/,
+  message: /^[\s\S]{3,}$/
+}
+
+
+// Segundo elemento de cada array es la validez
+// Este objeto guarda el valor, de esta forma nos ahorramos tener que pedir el valor de cada input
+// Cada vez que queramos enviarlo
+let inputsValues = {
+  name: ["", false],
+  email: ["", false],
+  subject: ["", false],
+  message: ["", false]
+}
+
+let warningsInputs = document.querySelectorAll('.warning-input-valid');
+
+const validar = (e) => {
+  let inputAValidar = document.getElementById(e.target.id);
+  inputsValues[e.target.id][0] = inputAValidar.value // Cambiamos el valor del input
+  if (regex[e.target.id].test(inputAValidar.value)) { // Testeamos este valor contra la regex
+    inputAValidar.classList.add('is-valid')
+    inputAValidar.classList.remove('is-invalid')
+    inputsValues[e.target.id][1] = true // Damos como true la validacion
+
+    // Deshabilitamos el texto aviso
+    e.target.nextElementSibling.classList.remove('warning-input-invalid')
+  } else {
+    inputAValidar.classList.add('is-invalid')
+    inputsValues[e.target.id][1] = false // Damos como false la validacion
+
+    // Mostramos el texto de aviso
+    e.target.nextElementSibling.classList.add('warning-input-invalid')
   }
+}
 
-  for (const key in params) {
-    if (params[key] == "") {
+
+let formInputs = document.querySelectorAll('.contact-input');
+// Con este bucle agregamos a todos los inputs el evento input y su validacion
+for (const input of formInputs) input.addEventListener('input', validar);
+
+
+const sendmail = () => {
+
+  for (const key in inputsValues) {
+    if (inputsValues[key][1] == false) {
       Swal.fire({
         position: 'center',
         icon: 'error',
@@ -58,12 +95,23 @@ const sendmail = () => {
   const serviceID = "service_mv0wp8r";
   const templateID = "template_0nthrxw";
 
-  emailjs.send(serviceID, templateID, params)
+  emailjs.send(serviceID, templateID, inputsValues)
     .then(res => {
-      document.getElementById("name").value = "";
-      document.getElementById("email").value = "";
-      document.getElementById("message").value = "";
-      document.getElementById("subject").value = "";
+
+      // Una vez enviado los datos reseteamos los inputs
+      for (const input of formInputs) {
+        input.value = "";
+        input.classList.remove("is-valid");
+        input.classList.remove("is-invalid");
+      }
+
+      inputsValues = {
+        name: ["", false],
+        email: ["", false],
+        subject: ["", false],
+        message: ["", false]
+      }
+
       console.log(res);
       Swal.fire({
         position: 'center',
