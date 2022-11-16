@@ -14,9 +14,22 @@
 }
 
 .logo-proyecto {
-    height: 100px !important;
+    height: 110px !important;
+    width: 110px !important;
 }
 
+@media only screen and (max-width: 600px) {
+    .logo-proyecto {
+        margin-left: 20px;
+        height: 75px !important;
+        width: 75px !important;
+    }
+
+    .scrolled .logo-proyecto{
+        height: 65px !important;
+        width: 65px !important;
+    }
+  }
 .proyecto-dropdown {
     background-color: rgb(255, 255, 255);
 }

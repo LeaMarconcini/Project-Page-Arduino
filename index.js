@@ -18,7 +18,7 @@ let div = document.querySelector('.left');
 
 window.onscroll = () => {
 
-  if (document.documentElement.scrollTop > 1) {
+  if (document.documentElement.scrollTop > 0) {
     document.querySelector(".navbar").classList.add("scrolled")
     div.style.height = "100vh"
   } else {
@@ -35,7 +35,6 @@ window.onscroll = () => {
   } else if (secondScrollTop < 0) {
     img[2].style.opacity = 0
     img[1].style.opacity = 1
-
   } 
 
 };
