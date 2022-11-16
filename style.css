@@ -13,6 +13,10 @@
     color: rgb(255, 255, 255);
 }
 
+.logo-proyecto {
+    height: 100px !important;
+}
+
 .proyecto-dropdown {
     background-color: rgb(255, 255, 255);
 }

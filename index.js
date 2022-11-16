@@ -1,7 +1,8 @@
 $().ready(function(){
-  $('[rel="tooltip"]').tooltip();
+  $('[rel="tooltip"]').tooltip({trigger:"hover"});
 
 });
+
 
 function rotateCard(btn){
   var $card = $(btn).closest('.card-container');
