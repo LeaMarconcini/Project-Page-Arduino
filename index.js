@@ -73,3 +73,24 @@ const sendmail = () => {
     .catch(err => console.log(err));
 }
 
+const progressbar = document.querySelector('.progress-bar');
+const cartas = document.querySelectorAll('.cartas-progreso');
+let progresoActual = 0;
+let contadorCartas = 0;
+
+const progreso = (e) => {
+  if (contadorCartas < cartas.length -    1){
+    cartas[contadorCartas + 1].classList.remove('carta-disabled');
+  }
+  cartas[contadorCartas].removeEventListener('mouseover', progreso);
+  if (progresoActual <= 100) {
+    progresoActual += 20;
+    progressbar.style.width = `${progresoActual}%`;
+    progressbar.innerHTML = `Paso ${contadorCartas + 1}`
+  }
+  contadorCartas++
+}
+
+for (const carta of cartas) {
+  carta.addEventListener('mouseover', progreso);
+}
