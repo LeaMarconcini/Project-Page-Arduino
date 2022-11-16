@@ -1,3 +1,17 @@
+$().ready(function(){
+  $('[rel="tooltip"]').tooltip();
+
+});
+
+function rotateCard(btn){
+  var $card = $(btn).closest('.card-container');
+  console.log($card);
+  if($card.hasClass('hover')){
+      $card.removeClass('hover');
+  } else {
+      $card.addClass('hover');
+  }
+}
 
 let div = document.querySelector('.left');
 
@@ -120,24 +134,11 @@ const sendmail = () => {
     .catch(err => console.log(err));
 }
 
-const progressbar = document.querySelector('.progress-bar');
-const cartas = document.querySelectorAll('.cartas-progreso');
-let progresoActual = 0;
-let contadorCartas = 0;
+let desarrolloBtns = document.querySelectorAll('.card-desarrollo-btn');
+// let cardsDesarrollo = querySelectorAll('.card-desarrollo');
 
-const progreso = (e) => {
-  if (contadorCartas < cartas.length -    1){
-    cartas[contadorCartas + 1].classList.remove('carta-disabled');
-  }
-  cartas[contadorCartas].removeEventListener('mouseover', progreso);
-  if (progresoActual <= 100) {
-    progresoActual += 20;
-    progressbar.style.width = `${progresoActual}%`;
-    progressbar.innerHTML = `Paso ${contadorCartas + 1}`
-  }
-  contadorCartas++
-}
-
-for (const carta of cartas) {
-  carta.addEventListener('mouseover', progreso);
+for (const btn of desarrolloBtns) {
+  btn.addEventListener('click', (e) => {
+    console.log(e.target.children)
+  })
 }
