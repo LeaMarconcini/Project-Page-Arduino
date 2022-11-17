@@ -14,8 +14,13 @@
 }
 
 .logo-proyecto {
-    height: 110px !important;
-    width: 110px !important;
+    height: 100px !important;
+    width: 100px !important;
+}
+
+.scrolled .logo-proyecto {
+    height: 90px !important;
+width: 90px !important;   
 }
 
 @media only screen and (max-width: 600px) {
