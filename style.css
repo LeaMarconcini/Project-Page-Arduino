@@ -1,7 +1,7 @@
 *{
     font-family: 'Century Gothic', Helvetica;
     scroll-behavior: smooth !important ;
-    scroll-margin-top: 60px;
+    scroll-margin-top: 136px;
 }
 
 ::selection {
@@ -28,6 +28,27 @@
     .scrolled .logo-proyecto{
         height: 65px !important;
         width: 65px !important;
+    }
+    .middle , #objetivo{
+        text-align: center;
+    }
+    .separador{
+        margin-left:auto;
+        margin-right: auto;
+    }
+    #arduino, .subtitulo {
+        margin: 0px;
+    }
+    .modelo3d{
+        width: 90% !important;
+    }
+    .img-main{
+        padding: 0px !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        width: 90% !important;
     }
   }
 .proyecto-dropdown {
@@ -111,7 +132,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-top: 60px;
+    margin-top: 100px;
   }
   
   .box {
