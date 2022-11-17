@@ -71,6 +71,14 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
+              <li><a class="dropdown-item proyecto-dropdown-item" href="#funcionamiento">Funcionamiento</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item proyecto-dropdown-item" href="#esquema">Esquema eléctrico</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
               <li><a class="dropdown-item proyecto-dropdown-item" href="#modelado3D">Modelado 3D</a></li>
               <li>
                 <hr class="dropdown-divider">
@@ -99,10 +107,13 @@
         <div class="middle row ">
           <div class="in-middle col-lg-6 col-sm-12">
 
-            <div class="in-in-middle d-flex justify-content-center flex-column w-100" id="arduino">
+            <div class="in-in-middle d-flex  flex-column w-100" id="arduino">
               <h2 class="titulo display-2 mt-5 scroll" id="titulo-principal">Corta Cables</h2>
               <hr class="w-50 separador">
               <p class="fs-5 text subtitulo">Un proyecto de Arduino</p>
+              <div class="img-disabled-container">
+                <img src="imgs/fotoFrontal.jpeg"  class="img-main-disabled firstImg" alt="placeholder" />
+              </div>
             </div>
 
             <div class="in-in-middle w-100" id="">
@@ -117,9 +128,43 @@
                     manual, transformándola en una tarea automatizada, rápida y precisa, controlada en base a entradas
                     proporcionadas a través de una aplicación móvil bluetooth.
                   </p>
+                  <div class="img-disabled-container">
+                    <img src="imgs/fotoFrontal2.jpeg" class="img-main-disabled" alt="placeholder" />
+                  </div>
                 </div>
               </div>
             </div>
+
+            <div class="in-in-middle w-100" id="">
+              <div class="">
+                <div class="">
+                  <h2 class="display-4 titulo scroll" id="aQuienBeneficia">¿A quién beneficia?</h2>
+                </div>
+                <div class="">
+                  <p class="mt-4 fs-5 ">
+                    Para nosotros este proyecto podría beneficiar a los siguientes individuos: </p>
+                  <ul>
+                    <li class="fs-5 list-item-beneficio">
+                      Un profesor, para darle a sus estudiantes cables ya cortados para realizar la práctica de un
+                      circuito
+                    </li>
+                    <li class="fs-5 list-item-beneficio">
+                      Un ferretero, para vender cables a medida a sus clientes.
+                    </li> 
+                    <li class="fs-5 list-item-beneficio">Un técnico electrónico o una persona aficionada a la electrónica, para facilitar y agilizar sus
+                      proyectos.
+                    </li> 
+
+                  </ul>
+
+                  <div class="img-disabled-container">
+                    <img src="imgs/fotoFrontal.jpeg" class="img-main-disabled" alt="placeholder" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
           </div>
           <div class="left col-lg-6 col-sm-12">
             <img src="imgs/fotoFrontal.jpeg" class="img-main" alt="placeholder" />
@@ -132,7 +177,7 @@
 
     <!-- Desarrollo -->
 
-    <div class="container text-center" id="desarrollo">
+    <div class="container text-center mt-5" id="desarrollo">
       <div class="mb-5">
         <h2 class="display-4 titulo">Desarrollo</h2>
       </div>
@@ -217,8 +262,8 @@
             <div class="front">
               <div class="content h-100">
                 <div class="main d-flex h-100 justify-content-center align-items-center">
-                  <button onclick="rotateCard(this)" class="name  rounded-circle" rel="tooltip"
-                  data-placement="bottom" title="Clickeame para ver el contenido!" >
+                  <button onclick="rotateCard(this)" class="name  rounded-circle" rel="tooltip" data-placement="bottom"
+                    title="Clickeame para ver el contenido!">
                     <p>3</p>
                   </button>
                 </div>
@@ -382,11 +427,27 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <iframe class="modelo3d" width="725" height="453" src="https://www.tinkercad.com/embed/1OBdMhd2J5e?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+            <iframe class="modelo3d" width="725" height="453"
+              src="https://www.tinkercad.com/embed/1OBdMhd2J5e?editbtn=1" frameborder="0" marginwidth="0"
+              marginheight="0" scrolling="no"></iframe>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="conainer text-center mt-5 mb-5">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="display-4 mb-3 titulo" id="esquema"> Diagrama esquema eléctrico</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <img src="imgs/esquema-electrico.png" class="img-fluid" alt="Esquema eléctrico">
+        </div>
+      </div>
+    </div>
+
 
     <!-- Codigo -->
     <div class="container text-center mb-5">
