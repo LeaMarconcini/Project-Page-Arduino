@@ -23,7 +23,7 @@ window.onscroll = () => {
     div.style.height = "100vh"
   } else {
     document.querySelector(".navbar").classList.remove("scrolled");
-    div.style.height = "calc(100vh - 60px)"
+    div.style.height = "calc(100vh - 80px)"
   }
 
   let img = document.querySelectorAll('.img-main')

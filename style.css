@@ -19,15 +19,15 @@
 }
 
 .scrolled .logo-proyecto {
-    height: 90px !important;
-    width: 90px !important;
+    height: 80px !important;
+    width: 80px !important;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .logo-proyecto {
         margin-left: 20px;
-        height: 75px !important;
-        width: 75px !important;
+        height: 70px !important;
+        width: 70px !important;
     }
 
     .scrolled .logo-proyecto {
@@ -1004,7 +1004,16 @@ span.cm-def {
     height: 100% !important;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
+    .in-in-middle {
+        height: fit-content;
+    }
+
+    .in-in-middle p, .in-in-middle li {
+        font-size: 16px !important;
+    }
+
+
     .img-main {
         display: none;
     }
@@ -1012,7 +1021,6 @@ span.cm-def {
     .img-disabled-container {
         display: flex !important;
         justify-content: center;
-        height: fit-content;
     }
 
     .firstImg {
@@ -1036,6 +1044,10 @@ span.cm-def {
 
     .left {
         display: none !important;
+    }
+
+    #desarrollo {
+        margin-top: 140px !important;
     }
 }
 .box img {
@@ -1159,4 +1171,14 @@ span.cm-def {
 
 .warning-input-invalid {
     display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    .subtitulo {
+        font-size: 18px !important;
+    }
+
+    .gist-data {
+        height: 350px !important;
+    }
 }
