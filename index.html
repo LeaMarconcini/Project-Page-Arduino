@@ -101,17 +101,17 @@
 
   <main>
 
-    <div class="wrapper">
-      <div class="box container">
+    <div class="wrapper ">
+      <div class="box container-md ">
 
-        <div class="middle row ">
+        <div class="middle row w-100">
           <div class="in-middle col-sm-12 col-md-6 col-lg-6 col-xs-12">
 
-            <div class="in-in-middle d-flex  flex-column w-100" id="arduino">
-              <h2 class="titulo display-2 mt-5 scroll" id="titulo-principal">Corta Cables</h2>
+            <div class="in-in-middle d-flex  flex-column  " id="arduino">
+              <h2 class="titulo display-2 mt-5 scroll " id="titulo-principal">Corta Cables</h2>
               <hr class="w-50 separador">
               <p class="fs-5 text subtitulo">Un proyecto de Arduino</p>
-              <div class="img-disabled-container">
+              <div class="img-disabled-container ">
                 <img src="imgs/fotoFrontal.jpeg"  class="img-main-disabled firstImg" alt="placeholder" />
               </div>
             </div>
@@ -242,7 +242,7 @@
               <div class="content h-50">
                 <div class="main d-flex h-100 justify-content-center flex-column align-items-around">
                   <h4 class="text-center h-25 d-flex align-items-center justify-content-center">Investigación</h4>
-                  <p class="text-center h-75">La primer tarea que llevamos a cabo fue la Investigación</p>
+                  <p class="text-center h-75">La primer tarea que llevamos a cabo fue la investigación sobre los materiales necesarios,la información de cada componente (tensiones, consumos, etc) y los metodos de corte</p>
                 </div>
               </div>
               <div class="name-container m-0 d-flex justify-content-center">
@@ -434,7 +434,8 @@
       </div>
     </div>
 
-    <div class="conainer text-center mt-5 mb-5">
+    <!-- Esquema -->
+    <div class="container text-center mt-5 mb-5">
       <div class="row">
         <div class="col-12">
           <h2 class="display-4 mb-3 titulo" id="esquema"> Diagrama esquema eléctrico</h2>
@@ -461,7 +462,6 @@
             GitHub, el
             cual
             anexamos por debajo</p>
-          <p class="text-start fs-5 text subtitulo-codigo">Arduino</p>
         </div>
       </div>
       <div class="row codigo-row">
@@ -484,6 +484,7 @@
       </div>
     </div>
 
+    <!-- Materiales -->
     <div class="container" id="materiales">
       <div class="row">
         <h2 class="titulo display-4 text-center" id="titulo-principal">Materiales</h2>
@@ -631,7 +632,9 @@
         <div class="col-lg-6 col-sm-12">
 
           <div class="card container d-flex justify-content-center shadow border-0 about-card" style="width: 18rem;">
-            <img src="imgs/fotoIvan.jpeg" class="card-img-top card-img-nosotros" alt="...">
+            <div class="img-card-container">
+              <img src="imgs/fotoIvan.jpeg" class="card-img-top card-img-nosotros" alt="...">
+            </div>
             <h4 class="mt-3 about-name">Kovach, Iván</h4>
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -663,7 +666,9 @@
 
         <div class="col-lg-6 col-sm-12 ">
           <div class="card container d-flex justify-content-center shadow border-0 about-card" style="width: 18rem;">
-            <img src="imgs/fotoLea.jpeg" class="card-img-top card-img-nosotros" alt="...">
+            <div class="img-card-container">
+              <img src="imgs/fotoLea.jpeg" class="card-img-top card-img-nosotros" alt="...">
+            </div>
             <h4 class="mt-3 about-name">Marconcini, Leandro</h4>
             <div class="card-body">
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -688,7 +693,7 @@
 
     <div class="container text-center">
       <section class="mb-4">
-        <h2 class="h1-responsive font-weight-bold text-center my-4 display-4" id="contacto">Contacto</h2>
+        <h2 class="h1-responsive font-weight-bold text-center my-4 display-4 titulo" id="contacto">Contacto</h2>
         <p class="text-center w-responsive mx-auto mb-5 fs-5 text fst-italic subtitulo">Si tienes un problema con el código o
           necesitas saber algo
           acerca de nuestro proyecto, contáctanos.</p>

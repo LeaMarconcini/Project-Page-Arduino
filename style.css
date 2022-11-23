@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:100,200,300,400,500,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800|Poppins&display=swap');
+
 * {
     font-family: 'Century Gothic', Helvetica;
     scroll-behavior: smooth !important;
@@ -40,10 +43,6 @@
         text-align: center;
     }
 
-    .separador {
-        margin-left: auto;
-        margin-right: auto;
-    }
 
     #arduino,
     .subtitulo {
@@ -59,7 +58,10 @@
         width: 90% !important;
     }
 
-    .img-main {}
+    .separador {
+        display: none;
+    }
+
 }
 
 .proyecto-dropdown {
@@ -85,8 +87,9 @@
 }
 
 .titulo {
-    font-family: Helvetica !important;
+    font-family: "Montserrat"!important;
     font-weight: 500 !important;
+    text-transform: uppercase;
 }
 
 .gist {
@@ -954,9 +957,6 @@ span.cm-def {
     object-fit: contain;
 }
 
-.titulo {
-    font-family: Geneva, Verdana, sans-serif;
-}
 
 .img-container {
     overflow: hidden;
@@ -1001,10 +1001,14 @@ span.cm-def {
 .img-disabled-container {
     display: none;
     width: 100% !important;
-    height: 100% !important;
 }
 
+
 @media only screen and (max-width: 768px) {
+    .box {
+        margin: 0px !important;
+        width: 100% !important;
+    }
     .in-in-middle {
         height: fit-content;
     }
@@ -1181,4 +1185,18 @@ span.cm-def {
     .gist-data {
         height: 350px !important;
     }
+}
+.card-texto {
+    text-align:justify !important ;
+    width: 70%;
+    margin: auto;
+}
+
+.img-card-container {
+    height: 400px;
+}
+
+.img-card-container img {
+    object-fit: cover;
+    height: 100%;
 }
