@@ -16,23 +16,27 @@ function rotateCard(btn){
 
 let div = document.querySelector('.left');
 
+let img = document.querySelectorAll('.img-main')
+img[1].style.opacity = 0
+    img[0].style.opacity = 0
 window.onscroll = () => {
 
   if (document.documentElement.scrollTop > 0) {
     document.querySelector(".navbar").classList.add("scrolled")
-    div.style.height = "100vh"
+    div.style.height = "calc(100vh - 90px)"
+    div.style.top = "90px";
   } else {
     document.querySelector(".navbar").classList.remove("scrolled");
-    div.style.height = "calc(100vh - 80px)"
+    div.style.height = "calc(100vh - 126px)"
   }
 
-  let img = document.querySelectorAll('.img-main')
   const firstScrollTop = 0 - document.getElementById("arduino").getBoundingClientRect().top;
   const secondScrollTop = 0 - document.getElementById("objetivo").getBoundingClientRect().top;
   const thirdScrollTop = 0 - document.getElementById("aQuienBeneficia").getBoundingClientRect().top;
   if (firstScrollTop < 1) {
     img[2].style.opacity = 1
-
+    img[1].style.opacity = 0
+    img[0].style.opacity = 0  
   } else if (secondScrollTop < 0) {
     img[2].style.opacity = 0
     img[1].style.opacity = 1
