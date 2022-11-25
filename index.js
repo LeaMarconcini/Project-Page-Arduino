@@ -3,7 +3,6 @@ $().ready(function(){
 
 });
 
-
 function rotateCard(btn){
   var $card = $(btn).closest('.card-container');
   console.log($card);
@@ -54,7 +53,7 @@ const regex = {
   name: /^([a-zA-Z]{3,20})( [a-zA-Z]{3,20})?$/,
   email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
   subject: /^[\s\S]{3,}$/,
-  message: /^[\s\S]{3,}$/
+  msm: /^[\s\S]{3,}$/
 }
 
 
@@ -65,7 +64,7 @@ let inputsValues = {
   name: ["", false],
   email: ["", false],
   subject: ["", false],
-  message: ["", false]
+  msm: ["", false]
 }
 
 let warningsInputs = document.querySelectorAll('.warning-input-valid');
@@ -97,6 +96,8 @@ for (const input of formInputs) input.addEventListener('input', validar);
 
 const sendmail = () => {
 
+  let dataToSend = {}
+
   for (const key in inputsValues) {
     if (inputsValues[key][1] == false) {
       Swal.fire({
@@ -108,12 +109,13 @@ const sendmail = () => {
       })
       return
     }
+    dataToSend[key] = inputsValues[key][0]
   }
 
   const serviceID = "service_mv0wp8r";
   const templateID = "template_0nthrxw";
 
-  emailjs.send(serviceID, templateID, inputsValues)
+  emailjs.send(serviceID, templateID, dataToSend)
     .then(res => {
 
       // Una vez enviado los datos reseteamos los inputs
@@ -127,7 +129,7 @@ const sendmail = () => {
         name: ["", false],
         email: ["", false],
         subject: ["", false],
-        message: ["", false]
+        msm: ["", false]
       }
 
       console.log(res);
